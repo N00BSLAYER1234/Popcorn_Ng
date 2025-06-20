@@ -1,0 +1,5 @@
+<header class="container d-flex justify-content-between bg-primary">
+    <img [src]="imagePath" alt="PopCornBase">
+    <nav><a class="text-white" routerLink="account">Profilo</a></nav>
+    <app-button [isSecondary]="true" (btnClicked)="onUserClick()" [title]="user?.username ? 'Ciao ' + user?.username : 'Login'"></app-button>
+</header>

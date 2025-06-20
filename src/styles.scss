@@ -1,0 +1,11 @@
+/* You can add global styles to this file, and also import other style files */
+// 1. Sovrascrivi le variabili di colore prima di importare Bootstrap
+$primary: #dc3545; 
+$secondary: #420000; 
+$yellow: #ffb000;
+$success: #28a745; 
+$danger: #dc3545; 
+$warning: #ffc107; 
+// Custom.scss
+
+@import "bootstrap/scss/bootstrap";

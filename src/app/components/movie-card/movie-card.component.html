@@ -1,0 +1,10 @@
+<div [id]="movie.id" class="card my-3">
+    <img [src]="posterPath" [alt]="posterAlt" class="card-img-top">
+    <div class="card-body">
+    <h3 class="card-title">{{ movie.title }}</h3>
+    @if (movie.overview) {
+        <p class="card-text">{{ movie.overview }}</p>
+    }
+    <app-popcorn-rating [rating]="movie.vote_average"></app-popcorn-rating>
+    </div>
+</div>
