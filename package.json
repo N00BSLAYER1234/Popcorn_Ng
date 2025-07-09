@@ -1,5 +1,5 @@
 {
-  "name": "pop-corn-demo",
+  "name": "pop-corn-base",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",

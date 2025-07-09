@@ -1,25 +1,23 @@
 div {
-    width: calc(5 * 30px);
-    height: 20px;
-    position: relative;
+  width: calc(5 * 30px);
+  height: 20px;
+  position: relative;
 
-    span {
-        display: inline-block;
-        height: 100%;
-        background-repeat: repeat-x;
-        background-size: 30px 20px;
-
-        &:first-child {
-            background-image: url(../../../assets/empty_popcorn.svg);
-            width: 100%;
-        }
-
-        &:last-child {
-            background-image: url(../../../assets/full_popcorn.svg);
-            width: 0;
-            position: absolute;
-            left: 0;
-            top: 0;
-        }
+  span {
+    display: inline-block;
+    height: 100%;
+    background-repeat: repeat-x;
+    background-size: 30px 20px;
+    &:first-child {
+      background-image: url(../../../assets/empty_popcorn.svg);
+      width: 100%;
     }
+    &:last-child {
+      background-image: url(../../../assets/full_popcorn.svg);
+      width: 0;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+  }
 }

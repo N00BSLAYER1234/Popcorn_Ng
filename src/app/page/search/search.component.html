@@ -1,0 +1,63 @@
+<div class="filters container my-5">
+  <form #form="ngForm" class="row g-3 align-items-end" (ngSubmit)="onSubmit(form)">
+    <!-- Campo di ricerca -->
+    <div class="col-md-5">
+      <label for="search" class="form-label">Cerca film</label>
+      <input type="text" id="search" class="form-control" placeholder="Titolo del film" name="search" required
+        minlength="3" ngModel #search="ngModel" />
+        @if (search.invalid && search.touched){
+        <span>Il campo è obbligatorio</span>
+}
+    </div>
+
+    <!-- Select Anno -->
+    <div class="col-md-2">
+      <label for="year" class="form-label">Anno</label>
+      <select id="year" class="form-select" name="year" ngModel>
+        <option value="">Tutti</option>
+        @for (year of years; track year) {
+        <option [value]="year">{{year}}</option>
+        }
+        <!-- Altri anni... -->
+      </select>
+    </div>
+
+    <!-- Select Genere -->
+    <div class="col-md-2">
+      <label for="genre" class="form-label">Genere</label>
+      <select id="genre" class="form-select" name="genre" ngModel>
+
+        <option value="">Tutti</option>
+        @for (genre of genres; track genre.id) {
+        <option [value]="genre.id">{{genre.name}}</option>
+        }
+      </select>
+    </div>
+
+    <!-- Select Ordina per -->
+    <div class="col-md-2">
+      <label for="sort" class="form-label">Ordina per</label>
+      <select id="sort" class="form-select" name="sort" ngModel>
+        <option value="">Predefinito</option>
+        <option value="popularity">Popolarità</option>
+        <option value="release_date">Data di uscita</option>
+        <option value="vote_average">Voto medio</option>
+      </select>
+    </div>
+
+    <!-- Pulsante Filtra -->
+    <div class="col-md-1 ms-auto">
+      <button class="btn btn-primary" type="submit">Filtra</button>
+    </div>
+
+  </form>
+</div>
+<div class="container my-3">
+  @if (movies.length > 0) {
+    <div class="row">
+      @for (movie of movies; track movie.id){
+        <div class="col-6 col-lg-4 col-md-3"> <app-movie-card [movie]="movie" type="horizontal" /></div>
+      }
+    </div>
+  }
+</div>

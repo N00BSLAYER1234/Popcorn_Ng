@@ -1,4 +1,4 @@
-# PopCornDemo
+# PopCornBase
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.17.
 
@@ -25,3 +25,9 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## [FIGMA LINK](https://www.figma.com/design/Uyxnk9uAr7cr940BbWHzSV/PopCornBase?node-id=0-1&t=LIFijwTXh5MPKU8H-1)
+
+### URL per le immagini
+
+- https://image.tmdb.org/t/p/w500/

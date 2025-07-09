@@ -5,10 +5,10 @@ import { Component, Input } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './popcorn-rating.component.html',
-  styleUrl: './popcorn-rating.component.scss'
+  styleUrl: './popcorn-rating.component.scss',
 })
 export class PopcornRatingComponent {
-  @Input() rating?: number | null;
+  @Input() rating?: number | null; // union type
   get ratingWidth() {
     return this.rating ? this.rating * 10 + '%' : '0';
   }

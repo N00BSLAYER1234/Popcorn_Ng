@@ -1,0 +1,18 @@
+<div class="px-4 text-center">
+<div class="ratio ratio-1x1 image-container mb-3">
+  <img [src]="profilePath" [alt]="posterAlt" class="figure-img img-fluid rounded-circle object-fit-cover " >
+</div>
+  <h3>{{actor.name}}</h3>
+  <p>L'hai visto in:</p>
+
+  <p>
+
+    @for (movie of actor.known_for; let i = $index; track movie.id) {
+    
+      {{ movie.media_type === 'movie' ? movie.title : movie.original_name }}
+      @if (i !== actor.known_for.length - 1) {, }
+    
+    }
+  </p>
+
+</div>

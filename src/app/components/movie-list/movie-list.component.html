@@ -1,13 +1,14 @@
-<div class="container">
-    @if (title) {
-        <h2>{{ title }}</h2>
-    }
-    <div class="row">
+<div class="container my-5">
+  @if (title) {
+    <h2>{{title}}</h2>
+  }
+  <div class="row">
     @for (movie of movies; track movie.id) {
-        <div class="col-md-6 col-xl-3">
-        <app-movie-card [movie]="movie"></app-movie-card>
+      <div class="col-6 col-lg-3 my-3 d-flex">
+        <div class="w-100 h-100">
+          <app-movie-card [movie]="movie" />
         </div>
+      </div>
     }
+  </div>
 </div>
-</div>
-

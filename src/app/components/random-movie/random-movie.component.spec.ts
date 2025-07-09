@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { RandomMovieComponent } from './random-movie.component';
 
 describe('RandomMovieComponent', () => {

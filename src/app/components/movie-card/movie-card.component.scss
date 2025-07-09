@@ -1,0 +1,6 @@
+.multiline-truncate {
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* Numero righe visibili */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
